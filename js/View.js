@@ -86,7 +86,7 @@ export class View extends EventEmitter{
     showRecentsList(data){
         this.recentsList.textContent = '';
         
-        if(data){
+        if(data.length){
             this.empty.style.display = 'none';
 
             data.forEach((item) => {

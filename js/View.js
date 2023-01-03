@@ -135,6 +135,7 @@ export class View extends EventEmitter{
         let element = event.target;
 
         if(element.id === this.formInput.id || element.className === 'btn-close'){
+            this.searchList.textContent = '';
             this.resultBox.style.display = 'block';
         } else {
             this.resultBox.style.display = 'none';

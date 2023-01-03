@@ -42,6 +42,13 @@ export class Model extends EventEmitter {
     }
 
     addRecent(recent){
+        if(!this.recents.length){
+            this.recents.push(recent);
+            this.emit('change', this.recents);
+    
+            return this.recents;
+        }
+
         let match = this.recents.filter(item => {
             if(item.location === recent.location){
                 return item;

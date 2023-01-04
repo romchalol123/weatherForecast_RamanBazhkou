@@ -1,47 +1,46 @@
 export class Controller {
-    constructor(model, view) {
-        this.model = model;
-        this.view = view;
+  constructor(model, view) {
+    this.model = model;
+    this.view = view;
 
-        view.on('load', this.getLocationList.bind(this));
-        view.on('add', this.addRecent.bind(this));
-        view.on('update', this.updateLocation.bind(this));
-        view.on('delete', this.deleteRecent.bind(this));
-    }
-    
-    async init(){
-        const locationData = await this.model.getLocationData();
-        const recents = this.model.onStart();
+    view.on('load', this.getLocationList.bind(this));
+    view.on('add', this.addRecent.bind(this));
+    view.on('update', this.updateLocation.bind(this));
+    view.on('delete', this.deleteRecent.bind(this));
+  }
 
-        this.view.showRecentsList(recents);
-        this.view.showWeather(locationData);
-    }
+  async init() {
+    const locationData = await this.model.getLocationData();
+    const recents = this.model.onStart();
 
-    async getLocationList(writtenData){
-        let data = await this.model.getLocationList(writtenData);
+    this.view.showRecentsList(recents);
+    this.view.showWeather(locationData);
+  }
 
-        this.view.showLocationList(data);
-    }
+  async getLocationList(writtenData) {
+    const data = await this.model.getLocationList(writtenData);
 
-    async updateLocation(locationName){
-        let data = await this.model.getLocationData(locationName);
+    this.view.showLocationList(data);
+  }
 
-        this.view.updateWeather(data);
-    }
+  async updateLocation(locationName) {
+    const data = await this.model.getLocationData(locationName);
 
-    addRecent(locationName){
-        let recents = this.model.addRecent({
-            location: locationName,
-            id: Date.now(),
-        });
+    this.view.updateWeather(data);
+  }
 
-        this.view.showRecentsList(recents)
-    }
+  addRecent(locationName) {
+    const recents = this.model.addRecent({
+      location: locationName,
+      id: Date.now(),
+    });
 
-    deleteRecent(id){
-        let recents = this.model.deleteRecent(id);
+    this.view.showRecentsList(recents);
+  }
 
-        this.view.showRecentsList(recents);
-    }
+  deleteRecent(id) {
+    const recents = this.model.deleteRecent(id);
 
+    this.view.showRecentsList(recents);
+  }
 }

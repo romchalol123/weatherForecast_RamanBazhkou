@@ -1,21 +1,21 @@
-import '../css/all.css'
+import '../css/all.css';
 import '../css/media.scss';
 
-import { StorageHelper } from './helpers/StorageHelper.js';
-import { DOMHelper } from "./helpers/DOMHelper.js";
+import { StorageHelper } from './helpers/StorageHelper';
+import { DOMHelper } from './helpers/DOMHelper';
 
-import { Model } from './Model.js'
-import { View } from './View.js'
-import { Controller } from './Controller.js'
+import { Model } from './Model';
+import { View } from './View';
+import { Controller } from './Controller';
 
 const units = {
-    temp: '°C',
-    pres: 'hPa',
-    wind: 'm/s',
-    hum: '%',
-    vis: 'km',
-    srise: '',
-    sset: '',
+  temp: '°C',
+  pres: 'hPa',
+  wind: 'm/s',
+  hum: '%',
+  vis: 'km',
+  srise: '',
+  sset: '',
 };
 
 const recents = StorageHelper.getItem('recents');

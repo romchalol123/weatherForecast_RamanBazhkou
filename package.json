@@ -5,6 +5,8 @@
   "preivate": "true",
   "main": "js/index.js",
   "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
     "build:dev": "webpack --config webpack.config.js --mode development",
     "build:prod": "webpack --config webpack.config.js --mode production",
     "build:watch": "webpack --mode development --config webpack.config.js --watch",
@@ -28,6 +30,8 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
     "node-sass": "^8.0.0",
@@ -43,6 +47,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "core-util-is": "^1.0.3"
+    "core-util-is": "^1.0.3",
+    "mkdirp": "^1.0.4"
   }
 }

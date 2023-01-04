@@ -49,7 +49,7 @@ module.exports = function (env, argV){
         devServer:{
             port: 9000,
             hot: true,
-            open: true,
+            open: false,
         },
 
         mode: mode,

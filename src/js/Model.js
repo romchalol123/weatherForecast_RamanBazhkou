@@ -8,7 +8,7 @@ export class Model extends EventEmitter {
         this.defChoice = 0;
 
         this.maxLength = 10;
-        this.recents = recents;
+        this.recents = JSON.parse(recents);
     };
 
     async getLocation(city, choice = undefined){
@@ -83,6 +83,10 @@ export class Model extends EventEmitter {
 
         this.emit('change', this.recents);
 
+        return this.recents;
+    }
+    
+    onStart(){
         return this.recents;
     }
 

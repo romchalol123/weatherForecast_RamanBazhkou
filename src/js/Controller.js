@@ -11,7 +11,9 @@ export class Controller {
     
     async init(){
         const locationData = await this.model.getLocationData();
+        const recents = this.model.onStart();
 
+        this.view.showRecentsList(recents);
         this.view.showWeather(locationData);
     }
 

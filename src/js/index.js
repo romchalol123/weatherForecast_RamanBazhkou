@@ -17,7 +17,7 @@ const units = {
 
 const recents = StorageHelper.getItem('recents');
 
-const model = new Model(recents || []);
+const model = new Model(JSON.parse(recents) || []);
 model.on('change', (recents) => StorageHelper.setItem('recents', recents));
 
 const view = new View(new DOMHelper(units));

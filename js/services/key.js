@@ -1,1 +1,0 @@
-export const key='{set your token here}';

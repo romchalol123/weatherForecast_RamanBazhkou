@@ -61,17 +61,12 @@ export class Model extends EventEmitter {
       this.emit('change', this.recents);
 
       return this.recents;
-    } else {
-      return this.recents;
     }
+    return this.recents;
   }
 
   deleteRecent(id) {
-    const updatedRecents = this.recents.filter((item) => {
-      if (item.id !== parseInt(id)) {
-        return item;
-      }
-    });
+    const updatedRecents = this.recents.filter((item) => item.id !== parseInt(id));
 
     this.recents = updatedRecents;
 

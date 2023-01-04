@@ -17,5 +17,6 @@ module.exports = {
     'no-shadow': 'off',
     'no-alert': 'off',
     'max-len': 'off',
+    'radix': 'off',
   },
 };

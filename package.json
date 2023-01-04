@@ -12,6 +12,7 @@
     "build:dev": "webpack --config webpack.config.js --mode development",
     "build:prod": "webpack --config webpack.config.js --mode production",
     "build:watch": "webpack --mode development --config webpack.config.js --watch",
+    "build:all": "npm run prettier:fix && npm run lint:fix && npm run build:prod",
     "start": "webpack serve"
   },
   "repository": {

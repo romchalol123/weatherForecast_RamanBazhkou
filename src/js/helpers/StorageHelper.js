@@ -3,7 +3,7 @@ export class StorageHelper {
         const value = localStorage.getItem(key);
 
         if(value){
-            return JSON.stringify(value);
+            return JSON.parse(value);
         }
 
         return null;

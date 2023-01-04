@@ -2,169 +2,167 @@
 @import 'style.scss';
 
 @media screen and (max-width: 768px) {
-    *{
-        body{
-            .header{
-                .fixed-box{
-                    #search-form{
-                        flex-direction: column-reverse;
+  * {
+    body {
+      .header {
+        .fixed-box {
+          #search-form {
+            flex-direction: column-reverse;
 
-                        .dropped-box{
-                            left: 0;
-                            top: 165px;
-                            width: 100%;
-                            border-radius: 0 0 10px 10px;
-                        }
-                    }
-                    #search-submit-btn{
-                        margin-top: 10px;
-                    }
-                }
+            .dropped-box {
+              left: 0;
+              top: 165px;
+              width: 100%;
+              border-radius: 0 0 10px 10px;
             }
-
-            .content-box{
-                .content{
-                    .data-container{
-                        height: auto;
-                        flex-direction: column;
-                
-                        .block.today{
-                                width: 100%;
-                        }
-                
-                        .block{
-                            .block-title{
-                                font-size: $fsz30;
-                                text-align: center;
-                            }
-                            &.today{
-                                width: 100%;
-
-                                .weather-info{
-                                    margin-bottom: 20px;
-
-                                    .bg-cont{
-                                        flex-direction: row;
-                                        flex-wrap: wrap;
-                                        justify-content: space-around;
-
-                                        .title-box{
-                                            width: 200px;
-                                            margin-bottom: 0;
-                                            margin-right: 15px;
-                                        }
-
-                                        .sun-time{
-                                            width: 100px;
-                                        }
-                                    }
-                                }
-                            }
-                            
-                            &.forecast{
-                                width: 100%;
-
-                                .visible-cont{
-                                    .scroll-cont{
-                                        .forecast-container{
-                                            display: flex;
-                                            flex-direction: row;
-
-                                            .card{
-                                                flex-direction: column;
-                                                justify-content: space-evenly;
-
-                                                height: 250px;
-                                                min-width: 160px;
-
-                                                .left-part{
-                                                    flex-direction: column;
-                                                    justify-content: space-evenly;
-                                                    align-items: center;
-
-                                                    .date{
-                                                        text-align: center;
-                                                        width: 70px;
-                                                    }
-
-                                                    .time{
-                                                        margin: 10px auto;
-                                                        font-size: $fsz22;
-                                                    }
-                                                }
-
-                                                .current-status{
-                                                    text-align: center;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            .footer{
-                & > ul:nth-child(1){
-                    order: 2;
-                    flex: 100% 0 0;
-                    margin-top: 20px;
-                }
-            }
+          }
+          #search-submit-btn {
+            margin-top: 10px;
+          }
         }
+      }
+
+      .content-box {
+        .content {
+          .data-container {
+            height: auto;
+            flex-direction: column;
+
+            .block.today {
+              width: 100%;
+            }
+
+            .block {
+              .block-title {
+                font-size: $fsz30;
+                text-align: center;
+              }
+              &.today {
+                width: 100%;
+
+                .weather-info {
+                  margin-bottom: 20px;
+
+                  .bg-cont {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    .title-box {
+                      width: 200px;
+                      margin-bottom: 0;
+                      margin-right: 15px;
+                    }
+
+                    .sun-time {
+                      width: 100px;
+                    }
+                  }
+                }
+              }
+
+              &.forecast {
+                width: 100%;
+
+                .visible-cont {
+                  .scroll-cont {
+                    .forecast-container {
+                      display: flex;
+                      flex-direction: row;
+
+                      .card {
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        height: 250px;
+                        min-width: 160px;
+
+                        .left-part {
+                          flex-direction: column;
+                          justify-content: space-evenly;
+                          align-items: center;
+
+                          .date {
+                            text-align: center;
+                            width: 70px;
+                          }
+
+                          .time {
+                            margin: 10px auto;
+                            font-size: $fsz22;
+                          }
+                        }
+
+                        .current-status {
+                          text-align: center;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .footer {
+        & > ul:nth-child(1) {
+          order: 2;
+          flex: 100% 0 0;
+          margin-top: 20px;
+        }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 600px) {
+  * {
+    body {
+      .content-box {
+        .content {
+          .data-container {
+            .block {
+              &.today {
+                .weather-info {
+                  .bg-cont {
+                    flex-direction: column;
 
-    *{
-        body{
-            .content-box{
-                .content{
-                    .data-container{
-                         .block{
-                            &.today{
-                                .weather-info{
-                                    .bg-cont{
-                                        flex-direction: column;
-
-                                        .title-box{
-                                            width: 100%;
-                                            margin-bottom: 20px;
-                                        }
-
-                                        .sun-time{
-                                            width: auto;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    .title-box {
+                      width: 100%;
+                      margin-bottom: 20px;
                     }
+
+                    .sun-time {
+                      width: auto;
+                    }
+                  }
                 }
+              }
             }
-
-            .footer{
-                & > ul:nth-child(1){
-                    order: 3;
-                    flex: 100% 0 0;
-                }
-
-                & > ul:nth-child(2){
-                    order: 1;
-                    flex: 0 100% 0;
-                }
-
-                & > ul:nth-child(3){
-                    order: 2;
-                    flex: 0 0 100%;
-
-                    margin-top: 30px;
-                }
-            }
+          }
         }
-    }
+      }
 
+      .footer {
+        & > ul:nth-child(1) {
+          order: 3;
+          flex: 100% 0 0;
+        }
+
+        & > ul:nth-child(2) {
+          order: 1;
+          flex: 0 100% 0;
+        }
+
+        & > ul:nth-child(3) {
+          order: 2;
+          flex: 0 0 100%;
+
+          margin-top: 30px;
+        }
+      }
+    }
+  }
 }

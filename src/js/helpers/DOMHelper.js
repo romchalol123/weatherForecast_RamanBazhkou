@@ -54,7 +54,9 @@ export class DOMHelper {
     return this.createElement({
       tag: 'p',
       classList: ['avg-temp'],
-      textContent: `Now: ${Math.round(tempCurr)}${this.units.temp}, feels like ${Math.round(tempFL)} ${this.units.temp}`,
+      textContent: `Now: ${Math.round(tempCurr)}${this.units.temp}, feels like ${Math.round(
+        tempFL,
+      )} ${this.units.temp}`,
     });
   }
 
@@ -172,9 +174,7 @@ export class DOMHelper {
     return this.createElement({
       tag: 'li',
       classList: ['list-item'],
-      attributes: [
-        { prop: 'id', value: id },
-      ],
+      attributes: [{ prop: 'id', value: id }],
       textContent: text,
       children: button,
       childrenAction: 'append',
@@ -189,15 +189,7 @@ export class DOMHelper {
     });
   }
 
-  createElement({
-    tag,
-    classList,
-    attributes,
-    textContent,
-    handlers,
-    children,
-    childrenAction,
-  }) {
+  createElement({ tag, classList, attributes, textContent, handlers, children, childrenAction }) {
     const element = document.createElement(tag);
 
     if (classList?.length) {

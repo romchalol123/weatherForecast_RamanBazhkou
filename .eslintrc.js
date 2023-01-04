@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: 'airbnb-base',
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
   overrides: [
   ],
   parserOptions: {
@@ -11,12 +11,12 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'prettier:prettier': 'error',
     'import/prefer-default-export': 'off', 
     'no-param-reassign': 'off',
     'class-methods-use-this': 'off',
     'no-shadow': 'off',
     'no-alert': 'off',
-    'max-len': 'off',
     'radix': 'off',
   },
 };

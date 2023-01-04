@@ -1,5 +1,9 @@
 import { EventEmitter } from './helpers/EventEmitter';
-import { getCurrentLocation, getTodayswWeatherData, getForecastData } from './services/forecast-service-api';
+import {
+  getCurrentLocation,
+  getTodayswWeatherData,
+  getForecastData,
+} from './services/forecast-service-api';
 
 export class Model extends EventEmitter {
   constructor(recents = []) {
@@ -22,7 +26,10 @@ export class Model extends EventEmitter {
 
   async getLocationData(city = this.defCity, choice = this.defChoice) {
     const currentLocation = await this.getLocation(city, choice);
-    const currentWeatherData = await getTodayswWeatherData(currentLocation.lat, currentLocation.lon);
+    const currentWeatherData = await getTodayswWeatherData(
+      currentLocation.lat,
+      currentLocation.lon,
+    );
     const forecastData = await getForecastData(currentLocation.lat, currentLocation.lon);
 
     const locationData = {

@@ -10,6 +10,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  jest: {
+    globals: true,
+  },
   rules: {
     'prettier/prettier': 'error',
     'import/prefer-default-export': 'off', 

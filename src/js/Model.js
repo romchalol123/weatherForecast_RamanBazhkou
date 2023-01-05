@@ -43,7 +43,7 @@ export class Model extends EventEmitter {
 
   async getLocationList(writtenData) {
     const data = await this.getLocation(writtenData);
-    console.log(data);
+    
     return data;
   }
 

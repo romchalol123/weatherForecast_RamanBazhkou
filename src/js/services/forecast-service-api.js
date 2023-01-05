@@ -5,4 +5,4 @@ export const getCurrentLocation = (currentCity) =>
 export const getTodayswWeatherData = (lat, lon) =>
   apiRequest(`data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`);
 export const getForecastData = (lat, lon) =>
-  apiRequest(`data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=27&units=metric`);
+  apiRequest(`data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=40&units=metric`);

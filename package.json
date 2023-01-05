@@ -14,7 +14,9 @@
     "build:watch": "webpack --mode development --config webpack.config.js --watch",
     "build:all": "npm run prettier:fix && npm run lint:fix && npm run build:prod",
     "start": "webpack serve",
-    "test": "jest"
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",
